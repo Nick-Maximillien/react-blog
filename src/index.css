@@ -1,0 +1,1386 @@
+@media (orientation:portrait) {
+:root {
+  width: 100%;
+}
+
+a {
+  color: #646cff;
+  text-decoration: none;
+
+}
+a:hover {
+  color: #535bf2;
+}
+body {
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+  width: 100%;
+  height: 100%;
+  background: gold;
+  background-image: url('');
+}
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.head {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 5% 0% 0%;
+  background-color: blueviolet;
+  color: white;
+}
+.navigation {
+  position: relative;
+  left: 70%;
+}
+.menuIcon {
+  width: 50%;
+  margin: 25% 25% 0% 0%;
+  padding: 0% 0% 0% 0%;
+
+}
+.menuItem {
+  text-decoration: none;
+}
+nav ul {
+  list-style: none;
+  display: block;
+  gap: 20px;
+}
+nav ul li {
+  position: relative;
+}
+nav {
+  position: relative;
+  left: 80%;
+}
+.dropdown-list {
+  font-size: 90%;
+  font-weight: bold;
+  position: absolute;
+  top: 100%;
+  right: 2%;
+  background: blanchedalmond;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid gold;
+  min-width: 150px;
+  display: none;
+  flex-direction: column;
+  z-index: 1001;
+  text-align: center;
+  border-radius: 7px;
+}
+.dropdown-container:hover .dropdown-list {
+  display: block;
+} 
+.dropdown-list, li {
+  display: block;
+}
+.dropdown-container:hover .dropdown-list {
+  display: block;
+}
+.dropdown-list li:hover {
+  background: gold;
+} 
+a:hover {
+  color: cyan;
+  text-decoration: none;
+} 
+.sectionA {
+  width: 100%;
+  height: 7%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 5% 0% 0%;
+  background-color: lightcyan;
+}
+
+.logo {
+  width: 30%;
+  height: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.responsiveLogo {
+  width: 70%;
+  height: 90%;
+  margin: 7% 10% 10% 10%;
+  padding: 0% 0% 0% 0%;
+}
+.searchInput {
+  width: 50%;
+  background-color: azure;
+  margin: 0% 0% 0% 5%;
+}
+.submit {
+  width: 30%;
+  font-size: 90%;
+  text-align: center;
+  color: white;
+  background-color: gold;
+  margin: 0% 0% 0% 0%;
+  padding: 5%;
+}
+.searchInput, .submit {
+  margin: 5% 0% 5% 0%;
+  padding: 0% 0% 0% 0%;
+  height: 30%;
+  border-radius: 10px;
+  position: relative;
+  left: 25%;
+}
+.date {
+  text-align: center;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+  font-size: 100%;
+}
+.title {
+  width: 100%;
+  height: auto;
+  margin: 0% 0% 0% 0%;
+  padding: 1% 1% 1% 1%;
+}
+.topicTitle {
+  width: 100%;
+  height: auto;
+  font-size: 150%;
+  font-weight: bold;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.shareRelated {
+  width: 90%;
+  background-color: silver;
+  color: white;
+  margin: 3% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+
+}
+p.share, p.related, p.topic1 {
+  width: 20%;
+  height: auto;
+  font-size: 100%;
+  display: inline;
+  margin: 0% 0% 0% 4%;
+  padding: 0% 0% 0% 0%;
+}
+.socials {
+  font-size: 90%;
+  position: relative;
+  left: 20%;
+}
+.dateToday {
+  position: relative;
+  bottom: 5px;
+}
+.twitter, .facebook, .email {
+  display: inline;
+  width: 5%;
+  height: 5%;
+  margin: 5% 0% 0% 5%;
+  padding: 0% 0% 0% 0%;
+}
+.mainContent {
+  width: 100%;
+  height: auto;
+}
+.upperContent {
+  width: 100%;
+  height: auto;
+}
+.lowerContent {
+  width: 80%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 5% 0% 0%;
+}
+.blogProfile {
+  float: right;
+  width: 25%;
+  height: 30%;
+  margin: 4% 4% 1% 1%;
+  padding: 2% 2% 2% 2%;
+  background-color: gold;
+  border-radius: 10px;
+}
+.blogImg {
+  float: left;
+  width: 35%;
+  margin: 4% 4% 1% 1%;
+  padding: 2% 2% 2% 2%;
+  background-color: lightcyan;
+}
+figcaption {
+  font-weight: bold;
+  width: 100%;
+}
+.capital {
+  font-size: 150%;
+}
+.subTopic {
+  color: rgb(212, 179, 118);
+  width: 200%;
+  font-size: 120%;
+  font-weight: bold;
+  margin: 10px 1px 10px 1px;
+  padding: 1% 1% 1% 1%;
+}
+.outro {
+  color: silver;
+  width: 200%;
+  font-size: 120%;
+  font-weight: bold;
+  margin: 10px 1px 10px 1px;
+  padding: 1% 1% 1% 1%;
+}
+img.align-left {
+  width: 97%;
+  height: 97%;
+}
+img.align-right {
+  width: 95%;
+  height: 95%;
+}
+.prevNext {
+  width: 100%;
+  background-color: silver;
+  margin: 5% 0% 5% 0%;
+  padding: 0% 0% 0% 0%;
+  height: 10%;
+}
+.previous, .next {
+  width: 30%;
+  display: inline;
+  font-size: 150%;
+  font-weight: bold;
+  color: white;
+  background-color: silver;
+  position: relative;
+  left: 40%;
+}
+.post-page {
+  background-color: lightcyan;
+}
+.postTitle {
+  margin: 4% 0% 0% 0%;
+  padding: 2% 0% 2% 10%;
+  font-size: 150%;
+  background-color: silver;
+  width: 100%;
+}
+.postContent {
+  margin: 2% 30% 5% 5%;
+  padding: 5% 5% 5% 5%;
+  text-indent: 10%;
+}
+.left-image {
+  max-width: 100%;
+  height: auto;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.first-word {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.author-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.footer {
+  width: 100%;
+  font-size: 100%;
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+}
+.blogImg .postContent {
+  float: left;
+}
+.contactPage {
+  width: 90%;
+  margin: 1%;
+  padding: 5%;
+}
+.contactPgFooter {
+  width: 100%;
+}
+.contactHead {
+  font-size: 250%;
+  font-weight: bold;
+  background-color: silver;
+  border-radius: 10px;
+  margin: 0% 2% 0% 2%;
+  padding: 2% 0% 2% 0%;
+}
+.inTouch {
+  font-size: 150%;
+  font-weight: bold;
+  margin: 0% 4% 0% 4%;
+  padding: 2% 2% 2% 2%;
+  text-align: left;
+}
+.gridAcontainer {
+  height: 15%;
+  text-align: center;
+  margin: 0% 0% 0% 0%;
+  padding: 2% 0% 2% 0%;
+}
+.gridBcontainer {
+  height: 15%;
+  text-align: center;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.gridF {
+  width: 100%;
+  height: 50%;
+}
+.gridG {
+  font-size: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 2% 0% 0% 5%;
+  padding: 2% 2% 3% 2%;
+  border: solid silver 5px;
+  border-radius: 10px;
+}
+.cell {
+  width: 60%;
+  font-size: 150%;
+  background-color: lightcyan;
+  border-radius: 10px;
+  margin: 0% 0% 0% 20%;
+}
+.emailTitle {
+  width: 100%;
+  background-color: silver;
+  height: auto;
+  text-align: center;
+  font-size: 170%;
+  font-weight: bold;
+  margin: 3% 0% 3% 0%;
+  padding: 3%;
+  color: black;
+  border-radius: 10px;
+}
+.labels {
+  font-size: 150%;
+}
+.nameAndMessage {
+  position: relative;
+  left: 20%;
+  height: auto;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 2%;
+}
+.name, .mail, .message {
+  width: 80%;
+  height: 10%;
+  border: solid;
+  border-radius: 10px;
+  margin: 2% 0% 2% 0%;
+}
+.message {
+  height: 15%;
+}
+.messageLabel {
+  width: 68%;
+}
+.send {
+  width: 50%;
+  font-size: 130%;
+  font-weight: bold;
+  margin: 3% 0% 0% 0%;
+  border-radius: 7px;
+  border: solid silver 5px;
+}
+.gridH {
+  font-size: 200%;
+  font-weight: bold;
+}
+.blockquote {
+  font-size: 150%;
+  color: aliceblue;
+  text-align: center;
+  margin: 4% 4% 4% 4%;
+  padding: 2% 2% 2% 2%;
+}
+.founder {
+  font-weight: bold;
+  text-align: center;
+  margin: 4% 4% 4% 4%;
+  padding: 2% 2% 2% 2%;
+} 
+.contactPageFooter {
+  width: 100%;
+  font-size: 190%;
+  font-weight: bold;
+}
+.AllPostsContainer {
+  width: 100%;
+}
+.postListTitle {
+  margin: 3% 0% 3% 0%;
+  width: 100%;
+  padding: 3% 0% 3% 0%;
+  font-size: 150%;
+  background-color: silver;
+  text-align: center;
+  border-radius: 7px;
+}
+.postListSubtitle {
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+  text-align: center;
+  font-size: 120%;
+}
+.card {
+  background-color: lightcyan;
+  margin: 2% 2% 2% 2%;
+  padding: 0% 0% 0% 2%;
+  border-radius: 10px;
+}
+.card-title {
+  color: silver;
+  border-radius: 7px;
+}
+.aboutMeGridA {
+  color: white;
+  width: 100%;
+  height: auto;
+  border: 5px white;
+  border-radius: 10px;
+  background-image: url('http://localhost:8080/images/webdevbg.png');
+}
+.aboutMeTitle {
+  font-size: 250%;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin: 0% 0% 1% 0%;
+  padding: 0% 0% 0% 0%;
+  color: cyan;
+  opacity: 100%;
+}
+.aboutMeText1 {
+  font-size: 150%;
+  font-weight: bold;
+  width: 100%;
+  margin: 1% 0% 1% 0%;
+  padding: 4% 1% 4% 1%;
+}
+.aboutMeText2 {
+  font-size: 120%;
+  font-weight: bold;
+  width: 100%;
+  margin: 1% 0% 1% 0%;
+  padding: 4% 1% 4% 1%;
+}
+.aboutProfile {
+  float: right;
+  width: 40%;
+  height: 70%;
+  border-style: solid;
+  margin: 10% 0% 1% 0%;
+}
+.themes {
+  width: 50%;
+}
+.theme1, .theme2, .theme3 {
+  width: 30%;
+}
+.homeContainer {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.upperHome {
+  width: 100%;
+  margin: 2% 0% 2% 0%;
+  padding: 2% 2% 2% 2%;
+  background-color: lightcyan;
+  border-radius: 10px;
+}
+.homeAside1 {
+  width: 50%;
+  margin: 0% 0% 0% 0%;
+  padding: 3% 3% 3% 3%; 
+  font-size: 75%;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.homeBlockquote {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+  color: black;
+}
+.homeCaption {
+  width: 100%;
+  margin: 10% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.homeAside2 {
+  width: 50%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 5%;
+}
+.homeImgFigure {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+  border-left: solid 5px gold;
+  border-right: solid 5px gold;
+  border-radius: 10px;
+}
+.homeImg {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.homeAside1, .homeAside2 {
+  float: left;
+}
+.midHome {
+  width: 100%;
+  margin: 2% 0% 2% 0%;
+  padding: 2% 2% 2% 2%;
+  background-color: lightcyan;
+  border-radius: 10px;
+}
+.homeAside3 {
+  width: 50%;
+  margin: 0% 0% 0% 0%;
+  padding: 3% 3% 3% 3%; 
+}
+.homeAside4 {
+  width: 50%;
+  margin: 0% 0% 0% 0%;
+  padding: 3% 3% 3% 3%; 
+}
+.homeAside3, .homeAside4 {
+  float: left;
+}
+.midHomeTitle1, .midHomeTitle2 {
+  width: 100%;
+  margin: 5% 0% 5% 0%;
+  padding: 3% 3% 3% 3%;
+  background-color: silver;
+  text-align: center;
+  border-radius: 10px;
+}
+.homeImgFigure1, .homeImgFigure2 {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+  background-color: gold;
+  border-radius: 10px;
+}
+.homeImg1, .homeImg2 {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.homeImg1 {
+  padding: 20px;
+
+}
+.subscribeTitle {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 4% 4% 4% 4%;
+  font-size: 100%;
+  font-weight: bold;
+  background-color: silver;
+  border-radius: 10px;
+  text-align: center;
+}
+.subscribeDescription {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 4% 4% 4% 4%;
+  font-size: 100%;
+}
+.subscribeForm {
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  padding: 0% 0% 0% 0%;
+  font-size: 100%;
+}
+.enterEmail {
+  width: 50%;
+  margin: 0% 0% 0% 10%;
+  font-size: 100%;
+  border-radius: 10px;
+}
+.homeForm {
+  margin: 5% 0% 5% 0%;
+  padding: 0% 0% 0% 0%;
+}
+.subscribe {
+  width: 30%;
+  border-radius: 10px;
+} 
+}
+@media (orientation:landscape) {
+  :root {
+    width: 100%;
+  }
+  
+  a {
+    color: #646cff;
+    text-decoration: none;
+  
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  body {
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    width: 100%;
+    height: 100%;
+    background: gold;
+  }
+  .container {
+    width: 100%;
+    height: auto;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .head {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 5% 0% 0%;
+    background-color: blueviolet;
+    color: white;
+  }
+  .navigation {
+    position: relative;
+    left: 70%;
+  }
+  .menuIcon {
+    width: 50%;
+    margin: 25% 25% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  
+  }
+  .menuItem {
+    text-decoration: none;
+  }
+  nav ul {
+    list-style: none;
+    display: block;
+    gap: 20px;
+  }
+  nav ul li {
+    position: relative;
+  }
+  nav {
+    position: relative;
+    left: 80%;
+  }
+  .dropdown-list {
+    font-size: 90%;
+    font-weight: bold;
+    position: absolute;
+    top: 100%;
+    right: 2%;
+    background: blanchedalmond;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid gold;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+    text-align: center;
+    border-radius: 7px;
+  }
+  .dropdown-container:hover .dropdown-list {
+    display: block;
+  } 
+  .dropdown-list, li {
+    display: block;
+  }
+  .dropdown-container:hover .dropdown-list {
+    display: block;
+  }
+  .dropdown-list li:hover {
+    background: gold;
+  } 
+  a:hover {
+    color: cyan;
+    text-decoration: none;
+  }
+  body {
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    width: 100%;
+    height: 100%;
+    background: gold;
+  }
+  .container {
+    width: 100%;
+    height: auto;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .head {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 5% 0% 0%;
+    background-color: blueviolet;
+    color: white;
+  }
+  .navigation {
+    position: relative;
+    left: 90%;
+  }
+  .menuIcon {
+    width: 50%;
+    margin: 25% 25% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  
+  }
+  .menuItem {
+    text-decoration: none;
+  }
+  nav ul {
+    list-style: none;
+    display: block;
+    gap: 20px;
+  }
+  nav ul li {
+    position: relative;
+  }
+  nav {
+    position: relative;
+    left: 80%;
+  }
+  .dropdown-list {
+    font-size: 90%;
+    font-weight: bold;
+    position: absolute;
+    top: 100%;
+    right: 2%;
+    background: blanchedalmond;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid gold;
+    min-width: 150px;
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+    text-align: center;
+    border-radius: 7px;
+  }
+  .dropdown-container:hover .dropdown-list {
+    display: block;
+  } 
+  .dropdown-list, li {
+    display: block;
+  }
+  .dropdown-container:hover .dropdown-list {
+    display: block;
+  }
+  .dropdown-list li:hover {
+    background: gold;
+  } 
+  a:hover {
+    color: cyan;
+    text-decoration: none;
+  } 
+  .sectionA {
+    width: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 5% 0% 0%;
+    background-color: lightcyan;
+  }
+  
+  .logo {
+    width: 15%;
+    height: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .responsiveLogo {
+    width: 50%;
+    height: 90%;
+    margin: 7% 10% 10% 10%;
+    padding: 0% 0% 0% 0%;
+  }
+  .searchInput {
+    width: 70%;
+    background-color: azure;
+    margin: 0% 0% 0% 5%;
+  }
+  .submit {
+    width: 30%;
+    font-size: 90%;
+    text-align: center;
+    color: white;
+    background-color: gold;
+    margin: 0% 0% 0% 0%;
+    padding: 5%;
+  }
+  .searchInput, .submit {
+    margin: 5% 0% 5% 0%;
+    padding: 0% 0% 0% 0%;
+    height: 30%;
+    border-radius: 10px;
+    position: relative;
+    left: 250%;
+  }
+  .date {
+    width: 50%;
+    text-align: center;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    font-size: 100%;
+    position: relative;
+    left: 45%;
+  }
+  .title {
+    width: 100%;
+    height: auto;
+    margin: 0% 0% 0% 0%;
+    padding: 1% 1% 1% 1%;
+  }
+  .topicTitle {
+    width: 100%;
+    height: auto;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .shareRelated {
+    width: 90%;
+    background-color: silver;
+    color: white;
+    margin: 3% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  
+  }
+  p.share, p.related, p.topic1 {
+    width: 20%;
+    height: auto;
+    font-size: 100%;
+    display: inline;
+    margin: 0% 0% 0% 4%;
+    padding: 0% 0% 0% 0%;
+  }
+  .socials {
+    width: 50%;
+    font-size: 90%;
+    position: relative;
+    left: 20%;
+  }
+  .dateToday {
+    font-size: 120%;
+  }
+  .twitter, .facebook, .email {
+    display: inline;
+    width: 5%;
+    height: 5%;
+    margin: 5% 5% 0% 5%;
+    padding: 0% 0% 0% 0%;
+  }
+  .mainContent {
+    width: 100%;
+    height: auto;
+  }
+  .upperContent {
+    width: 100%;
+    height: auto;
+  }
+  .lowerContent {
+    width: 80%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 5% 0% 0%;
+  }
+  .blogProfile {
+    float: right;
+    width: 25%;
+    height: 30%;
+    margin: 4% 4% 1% 1%;
+    padding: 2% 2% 2% 2%;
+    background-color: gold;
+    border-radius: 10px;
+  }
+  .blogImg {
+    float: left;
+    width: 35%;
+    margin: 4% 4% 1% 1%;
+    padding: 2% 2% 2% 2%;
+    background-color: lightcyan;
+  }
+  figcaption {
+    font-weight: bold;
+    width: 100%;
+  }
+  .capital {
+    font-size: 150%;
+  }
+  .subTopic {
+    color: rgb(212, 179, 118);
+    width: 200%;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 10px 1px 10px 1px;
+    padding: 1% 1% 1% 1%;
+  }
+  .outro {
+    color: silver;
+    width: 200%;
+    font-size: 120%;
+    font-weight: bold;
+    margin: 10px 1px 10px 1px;
+    padding: 1% 1% 1% 1%;
+  }
+  img.align-left {
+    width: 97%;
+    height: 97%;
+  }
+  img.align-right {
+    width: 95%;
+    height: 95%;
+  }
+  .prevNext {
+    width: 100%;
+    background-color: silver;
+    margin: 5% 0% 5% 0%;
+    padding: 0% 0% 0% 0%;
+    height: 10%;
+  }
+  .previous, .next {
+    width: 30%;
+    display: inline;
+    font-size: 150%;
+    font-weight: bold;
+    color: white;
+    background-color: silver;
+    position: relative;
+    left: 40%;
+  }
+  .post-page {
+    background-color: lightcyan;
+  }
+  .postTitle {
+    margin: 2% 0% 0% 0%;
+    padding: 2% 0% 2% 10%;
+    font-size: 150%;
+    background-color: silver;
+    width: 100%;
+  }
+  .postContent {
+    margin: 2% 30% 5% 5%;
+    padding: 5% 5% 5% 5%;
+    text-indent: 10%;
+  }
+  .left-image {
+    max-width: 100%;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  .first-word {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .author-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 10px;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .footer {
+    width: 100%;
+    font-size: 100%;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+  }
+  .blogImg .postContent {
+    float: left;
+  }
+  .contactPage {
+    width: 90%;
+    margin: 1%;
+    padding: 5%;
+  }
+  .contactPgFooter {
+    width: 100%;
+  }
+  .contactHead {
+    font-size: 250%;
+    font-weight: bold;
+    background-color: silver;
+    border-radius: 10px;
+    margin: 0% 2% 0% 2%;
+    padding: 1% 0% 1% 0%;
+  }
+  .inTouch {
+    width: 70%;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 0% 4% 0% 4%;
+    padding: 2% 2% 2% 2%;
+  }
+  .gridAcontainer {
+    height: 15%;
+    text-align: center;
+    margin: 0% 0% 0% 0%;
+    padding: 2% 0% 2% 0%;
+  }
+  .gridBcontainer {
+    height: 15%;
+    text-align: center;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .gridF {
+    width: 100%;
+    height: 50%;
+  }
+  .gridG {
+    font-size: 100%;
+    width: 50%;
+    height: 100%;
+    margin: 2% 0% 0% 5%;
+    position: relative;
+    left: 15%;
+    padding: 2% 2% 3% 2%;
+    border: solid silver 5px;
+    border-radius: 10px;
+  }
+  .sectionD {
+    width: 100%;
+    font-size: 100%;
+    height: 100%;
+    margin: 0% 2% 0% 0%;
+    padding: 1% 10% 1% 1%;
+    font-weight: bold;
+  }
+  .cell {
+    width: 20%;
+    font-size: 150%;
+    background-color: lightcyan;
+    border-radius: 10px;
+  }
+  .inTouch, .cell {
+    float: left;
+  }
+  .emailTitle {
+    width: 100%;
+    background-color: silver;
+    height: auto;
+    text-align: center;
+    font-size: 170%;
+    font-weight: bold;
+    margin: 3% 0% 3% 0%;
+    padding: 3%;
+    color: black;
+    border-radius: 10px;
+  }
+  .labels {
+    font-size: 150%;
+  }
+  .nameAndMessage {
+    position: relative;
+    left: 20%;
+    height: auto;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 2%;
+  }
+  .name, .mail, .message {
+    width: 80%;
+    height: 10%;
+    border: solid;
+    border-radius: 10px;
+    margin: 2% 0% 2% 0%;
+  }
+  .message {
+    height: 15%;
+  }
+  .messageLabel {
+    width: 68%;
+  }
+  .send {
+    width: 50%;
+    font-size: 130%;
+    font-weight: bold;
+    margin: 3% 0% 0% 0%;
+    border-radius: 7px;
+    border: solid silver 5px;
+  }
+  .gridH {
+    font-size: 200%;
+    font-weight: bold;
+  }
+  .blockquote {
+    font-size: 150%;
+    color: aliceblue;
+    text-align: center;
+    margin: 4% 4% 4% 4%;
+    padding: 2% 2% 2% 2%;
+  }
+  .founder {
+    font-weight: bold;
+    text-align: center;
+    margin: 4% 4% 4% 4%;
+    padding: 2% 2% 2% 2%;
+  } 
+  .contactPageFooter {
+    width: 100%;
+    font-size: 190%;
+    font-weight: bold;
+  }
+  .AllPostsContainer {
+    width: 100%;
+  }
+  .postListTitle {
+    margin: 3% 1% 3% 1%;
+    width: 100%;
+    padding: 3% 0% 3% 0%;
+    font-size: 150%;
+    background-color: silver;
+    text-align: center;
+    border-radius: 7px;
+  }
+  .postListSubtitle {
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    text-align: center;
+    font-size: 120%;
+  }
+  .card {
+    background-color: lightcyan;
+    margin: 2% 2% 2% 2%;
+    padding: 0% 0% 0% 2%;
+    border-radius: 10px;
+  }
+  .card-title {
+    color: silver;
+    border-radius: 7px;
+  }
+  .aboutMeGridA {
+    color: white;
+    width: 100%;
+    height: auto;
+    border: 5px white;
+    border-radius: 10px;
+    background-image: url('http://localhost:8080/images/webdevbg.png');
+  }
+  .aboutMeTitle {
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin: 0% 0% 1% 0%;
+    padding: 0% 0% 0% 0%;
+    color: cyan;
+    opacity: 100%;
+  }
+  .aboutMeText1 {
+    font-size: 150%;
+    font-weight: bold;
+    width: 100%;
+    margin: 1% 0% 1% 0%;
+    padding: 4% 1% 4% 1%;
+  }
+  .aboutMeText2 {
+    font-size: 120%;
+    font-weight: bold;
+    width: 100%;
+    margin: 1% 0% 1% 0%;
+    padding: 4% 1% 4% 1%;
+  }
+  .aboutProfile {
+    float: right;
+    width: 40%;
+    height: 70%;
+    border-style: solid;
+    margin: 10% 0% 1% 0%;
+  }
+  .themes {
+    width: 50%;
+  }
+  .theme1, .theme2, .theme3 {
+    width: 30%;
+  }
+  .homeContainer {
+    width: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .upperHome {
+    width: 100%;
+    height: 20%;
+    margin: 2% 1% 2% 1%;
+    padding: 2% 2% 2% 2%;
+    background-color: lightcyan;
+    border-radius: 10px;
+  }
+  .homeAside1 {
+    width: 50%;
+    margin: 0% 0% 0% 0%;
+    padding: 3% 3% 3% 3%; 
+    font-size: 75%;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 50%;
+  }
+  .homeBlockquote {
+    width: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    color: black;
+  }
+  .homeCaption {
+    width: 100%;
+    margin: 10% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .homeAside2 {
+    width: 50%;
+    height: 200px;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .homeImgFigure {
+    width: 100%;
+    height: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    border-left: solid 5px gold;
+    border-right: solid 5px gold;
+    border-radius: 10px;
+  }
+  .homeImg {
+    width: 100%;
+    height: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .homeAside1, .homeAside2 {
+    float: left;
+  }
+  .midHome {
+    width: 100%;
+    margin: 2% 1% 2% 1%;
+    padding: 2% 2% 2% 2%;
+    background-color: lightcyan;
+    border-radius: 10px;
+  }
+  .homeAside3 {
+    width: 50%;
+    height: 50%;
+    margin: 0% 0% 0% 0%;
+    padding: 3% 3% 3% 3%; 
+  }
+  .homeAside4 {
+    width: 50%;
+    height: 50%;
+    margin: 0% 0% 0% 0%;
+    padding: 3% 3% 3% 3%; 
+  }
+  .homeAside3, .homeAside4 {
+    float: left;
+  }
+  .midHomeTitle1, .midHomeTitle2 {
+    width: 100%;
+    margin: 2% 1% 3% 1%;
+    padding: 3% 3% 3% 3%;
+    background-color: silver;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .homeImgFigure1, .homeImgFigure2 {
+    width: 100%;
+    height: 50%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    background-color: gold;
+    border-radius: 10px;
+  }
+  .homeImg1, .homeImg2 {
+    width: 100%;
+    height: 50vh;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .homeImg1, .homeImg2 {
+    padding: 20px;
+  
+  }
+  .subscribeTitle {
+    width: 100%;
+    margin: 2% 1% 2% 1%;
+    padding: 2% 4% 2% 4%;
+    font-size: 100%;
+    font-weight: bold;
+    background-color: silver;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .subscribeDescription {
+    width: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 2% 4% 2% 4%;
+    font-size: 100%;
+  }
+  .subscribeForm {
+    width: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    font-size: 100%;
+  }
+  .enterEmail {
+    width: 50%;
+    margin: 0% 0% 0% 10%;
+    font-size: 100%;
+    border-radius: 10px;
+  }
+  .homeForm {
+    margin: 3% 0% 3% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+  .subscribe {
+    width: 30%;
+    border-radius: 10px;
+  }   
+}
+
+
