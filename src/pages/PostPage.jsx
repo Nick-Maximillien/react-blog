@@ -20,7 +20,7 @@ const PostPage = () => {
     useEffect(() => {
         console.log('Captured documentId: ', documentId);
         axios
-            .get(`http://localhost:1337/api/blog-posts?filters[documentId][$eq]=${documentId}&populate=Images`)
+            .get(`https://my-strapi-blog-xoye.onrender.com/api/blog-posts?filters[documentId][$eq]=${documentId}&populate=Images`)
             .then((response) => {
                 if (response.data.data.length > 0) {
                     console.log("Fetched Post Data:", response.data.data[0]);
