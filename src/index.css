@@ -93,6 +93,15 @@ nav {
 a:hover {
   color: cyan;
   text-decoration: none;
+}
+.postDate {
+  border-radius: 10px;
+  background-color: gold;
+  margin: 1% 1% 1% 1%;
+  padding: 0% 1% 0% 1%;
+  height: 40px;
+  position: relative;
+  left: 70%;
 } 
 .sectionA {
   width: 100%;
@@ -269,7 +278,7 @@ img.align-right {
   background-color: lightcyan;
 }
 .postTitle {
-  margin: 4% 0% 0% 0%;
+  margin: 1% 0% 0% 0%;
   padding: 2% 0% 2% 10%;
   font-size: 150%;
   background-color: silver;
@@ -992,12 +1001,21 @@ img {
     background-color: lightcyan;
   }
   .postTitle {
-    margin: 2% 0% 0% 0%;
+    margin: 1% 0% 0% 0%;
     padding: 2% 0% 2% 10%;
     font-size: 150%;
     background-color: silver;
     width: 100%;
   }
+  .postDate {
+    border-radius: 10px;
+    background-color: gold;
+    margin: 1% 1% 1% 1%;
+    padding: 0% 1% 0% 1%;
+    height: 40px;
+    position: relative;
+    left: 70%;
+  } 
   .postContent {
     margin: 2% 30% 5% 5%;
     padding: 5% 5% 5% 5%;

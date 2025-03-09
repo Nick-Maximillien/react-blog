@@ -43,8 +43,7 @@ const PostPage = () => {
 
     return (
         <div className="container mt-4 post-page">
-            
-            
+            <button className="postDate">{post.Date}</button>
             <h1 className="postTitle">{post.Title || "Untitled Post"}</h1>
                 <figure className='blogProfile'>
                     <img
