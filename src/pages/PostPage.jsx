@@ -3,32 +3,29 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const PostPage = () => {
-    const { documentId } = useParams(); // ✅ Get documentId from URL
+    const { documentId } = useParams();
     const navigate = useNavigate();
     const [post, setPost] = useState(null);
-    const [posts, setPosts] = useState([]); // ✅ Store all posts
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const content = post?.Content || "";
-    const paragraphs = content.split("\n\n");
-    const firstParagraphWords = paragraphs[0]?.split(" ") || [];
-    const firstWord = firstParagraphWords.shift() || "";
-    const firstParagraphRest = firstParagraphWords.join(" ");
-    
+    const [allPosts, setAllPosts] = useState([]);
+
     useEffect(() => {
+        console.log('Captured documentId: ', documentId);
+
+        // Fetch all posts to determine previous/next
         axios
             .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?populate=Images`)
             .then((response) => {
-                if (response.data.data.length > 0) {
-                    setPosts(response.data.data); // ✅ Store all posts
-                    const currentPost = response.data.data.find(post => post.id.toString() === documentId);
-                    if (currentPost) {
-                        setPost(currentPost);
-                    } else {
-                        setError("Post not found.");
-                    }
+                const posts = response.data.data;
+                setAllPosts(posts);
+
+                // Find the current post
+                const currentPost = posts.find(p => p.id.toString() === documentId);
+                if (currentPost) {
+                    setPost(currentPost);
                 } else {
-                    setError("No posts available.");
+                    setError("Post not found.");
                 }
                 setLoading(false);
             })
@@ -40,11 +37,11 @@ const PostPage = () => {
     }, [documentId]);
 
     const handleNavigation = (direction) => {
-        const currentIndex = posts.findIndex(p => p.id.toString() === documentId);
+        const currentIndex = allPosts.findIndex(p => p.id.toString() === documentId);
         if (currentIndex !== -1) {
             const newIndex = direction === "prev" ? currentIndex - 1 : currentIndex + 1;
-            if (posts[newIndex]) {
-                navigate(`/post/${posts[newIndex].id}`);
+            if (allPosts[newIndex]) {
+                navigate(`/post/${allPosts[newIndex].id}`);
             }
         }
     };
@@ -52,6 +49,12 @@ const PostPage = () => {
     if (loading) return <p>Loading post...</p>;
     if (error) return <p>{error}</p>;
     if (!post) return <p>Post not found.</p>;
+
+    const content = post?.Content || "";
+    const paragraphs = content.split("\n\n");
+    const firstParagraphWords = paragraphs[0]?.split(" ") || [];
+    const firstWord = firstParagraphWords.shift() || "";
+    const firstParagraphRest = firstParagraphWords.join(" ");
 
     return (
         <div className="container mt-4 post-page">

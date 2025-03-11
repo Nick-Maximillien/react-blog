@@ -1319,7 +1319,7 @@ img {
     height: 100%;
     margin: 0% 0% 0% 0%;
     padding: 0% 0% 0% 0%;
-    content: url('C:/Users/hp/blog-react/public/images/altHomeImg.jpg');
+    content: url('https://muema-william.netlify.app/images/altHomeImg.jpg');
   }
   .homeAside1, .homeAside2 {
     float: left;
