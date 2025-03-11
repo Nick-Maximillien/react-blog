@@ -3,90 +3,65 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const PostPage = () => {
-    const { documentId } = useParams();
+    const { documentId } = useParams(); // ✅ Get documentId from URL
     const navigate = useNavigate();
     const [post, setPost] = useState(null);
+    const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [allPosts, setAllPosts] = useState([]);
-
+    
     useEffect(() => {
         console.log('Captured documentId: ', documentId);
         axios
-            .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?filters[documentId][$eq]=${documentId}&populate=Images`)
+            .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?populate=Images`)
             .then((response) => {
                 if (response.data.data.length > 0) {
-                    console.log("Fetched Post Data:", response.data.data[0]);
-                    setPost(response.data.data[0]); // ✅ Get first matching post
+                    setPosts(response.data.data);
+                    const currentPost = response.data.data.find(p => p.attributes.documentId === documentId);
+                    if (currentPost) {
+                        setPost(currentPost);
+                    } else {
+                        setError("Post not found.");
+                    }
                 } else {
-                    setError("Post not found.");
+                    setError("No posts available.");
                 }
                 setLoading(false);
             })
             .catch((error) => {
-                console.error("Error fetching post:", error);
-                setError("Failed to load post.");
+                console.error("Error fetching posts:", error);
+                setError("Failed to load posts.");
                 setLoading(false);
             });
-
-        // Fetch all posts to determine prev/next navigation
-        axios
-            .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?sort=Date:asc`)
-            .then((response) => {
-                setAllPosts(response.data.data);
-            })
-            .catch((error) => {
-                console.error("Error fetching all posts:", error);
-            });
     }, [documentId]);
-
-    const handleNavigation = (direction) => {
-        const currentIndex = allPosts.findIndex(p => p.id.toString() === documentId);
-        if (currentIndex !== -1) {
-            const newIndex = direction === "prev" ? currentIndex - 1 : currentIndex + 1;
-            if (allPosts[newIndex]) {
-                navigate(`/post/${allPosts[newIndex].id}`);
-            }
-        }
-    };
 
     if (loading) return <p>Loading post...</p>;
     if (error) return <p>{error}</p>;
     if (!post) return <p>Post not found.</p>;
-
-    const content = post?.Content || "";
-    const paragraphs = content.split("\n\n");
-    const firstParagraphWords = paragraphs[0]?.split(" ") || [];
-    const firstWord = firstParagraphWords.shift() || "";
-    const firstParagraphRest = firstParagraphWords.join(" ");
+    
+    const currentIndex = posts.findIndex(p => p.attributes.documentId === documentId);
+    const prevPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+    const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
 
     return (
         <div className="container mt-4 post-page">
-            <button className="postDate">{post.Date}</button>
-            <h1 className="postTitle">{post.Title || "Untitled Post"}</h1>
-            <figure className='blogProfile'>
-                <img src={`../images/blogProfile.jpg`} alt='author profile' className="left-image img-fluid" />
+            <button className="postDate">{post.attributes.Date}</button>
+            <h1 className="postTitle">{post.attributes.Title || "Untitled Post"}</h1>
+                <figure className='blogProfile'>
+                    <img
+                    src={`../images/blogProfile.jpg`}
+                    alt='author profile'
+                    className="left-image img-fluid"
+                />
                 <figcaption>Rev. Muema William</figcaption>
-            </figure>
+                </figure>
             {/* Content */}
-            {paragraphs.map((paragraph, index) => (
-                <p key={index} className="postContent">
-                    {index === 0 ? (
-                        <>
-                            <span style={{ fontWeight: "bold", fontSize: "150%" }}>{firstWord}</span> {" "} {firstParagraphRest}
-                        </>
-                    ) : (
-                        paragraph
-                    )}
-                </p>
+            {post.attributes.Content.split("\n\n").map((paragraph, index) => (
+                 <p key={index} className="postContent">{paragraph}</p>
             ))}
             <section className="prevNext col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <p className='previous' onClick={() => handleNavigation("prev")} style={{ cursor: "pointer" }}>
-                    ◄ Prev |
-                </p>
-                <p className='next' onClick={() => handleNavigation("next")} style={{ cursor: "pointer" }}>
-                    | Next ►
-                </p>
+                {prevPost && <p className='previous' onClick={() => navigate(`/post/${prevPost.attributes.documentId}`)}>◄ Prev |</p>}
+                {nextPost && <p className='next' onClick={() => navigate(`/post/${nextPost.attributes.documentId}`)}>| Next ►</p>}
             </section>
         </div>
     );
