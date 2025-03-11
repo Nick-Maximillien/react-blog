@@ -15,7 +15,7 @@ function PostList({ posts }) {
               {/* ✅ Ensure Images field exists before accessing */}
               {post.Images?.data && (
                 <img
-                src={`https://my-strapi-blog-xoye.onrender.com/${post.Images.data.attributes.url}`} 
+                src={`https://my-strapi-blog-1.onrender.com/${post.Images.data.attributes.url}`} 
                   alt={post.Title || "Untitled Post"}
                   className="card-img-top"
                 />

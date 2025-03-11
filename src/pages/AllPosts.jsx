@@ -6,7 +6,7 @@ function AllPosts() {
   const [posts, setPosts] = useState([]); // ✅ Fixed variable name
 
   useEffect(() => {
-    axios.get("https://my-strapi-blog-xoye.onrender.com/api/blog-posts?populate=*") // ✅ Correct API endpoint
+    axios.get("https://my-strapi-blog-1.onrender.com/api/blog-posts?populate=*") // ✅ Correct API endpoint
       .then((response) => setPosts(response.data.data)) // ✅ Extract posts properly
       .catch((error) => console.error("Error fetching posts:", error));
   }, []);
