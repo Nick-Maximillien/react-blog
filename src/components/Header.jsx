@@ -32,6 +32,9 @@ const Header = () => {
                 <li className="menuItem">
                   <Link to="/contact">Contact</Link>
                 </li>
+                <li className="menuItem">
+                  <Link to="/gallery">Gallery</Link>
+                </li>
               </ul>
             )}
           </li>
@@ -46,8 +49,8 @@ const Header = () => {
                 <section className="date col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <span className='socials'>
     <img className="twitter" src="../images/twitter1.png" alt="" />
-    <img className="facebook" src="../images/facebook1.png" alt="" />
-    <img className="email" src="../images/email1.png" alt="" />
+    <Link to='https://web.facebook.com/muemaT.william'><img className="facebook" src="../images/facebook1.png" alt="" /></Link>
+    <Link to='mailTo:transformationcentretassia@gmail.com'><img className="email" src="../images/email1.png" alt="" /></Link>
 </span>
                 </section>
   </div>

@@ -44,6 +44,13 @@ const Home = () => {
                     className="homeImg1"
                 />
                 </figure>
+                <figure className='homeImgFigure1'>
+                    <img 
+                    src={`../images/midHomeCopy.png`}
+                    alt='home image'
+                    className="homeImg1"
+                />
+                </figure>
                 </div>
                 <div className='homeAside4'>
             <h4 className='midHomeTitle2'>Books</h4>

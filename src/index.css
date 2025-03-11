@@ -192,9 +192,9 @@ p.share, p.related, p.topic1 {
 }
 .twitter, .facebook, .email {
   display: inline;
-  width: 5%;
-  height: 5%;
-  margin: 5% 0% 0% 5%;
+  width: 7%;
+  height: 7%;
+  margin: 5% 3% 3% 7%;
   padding: 0% 0% 0% 0%;
 }
 .mainContent {
@@ -366,7 +366,6 @@ img {
   height: 100%;
   margin: 2% 0% 0% 5%;
   padding: 2% 2% 3% 2%;
-  border: solid silver 5px;
   border-radius: 10px;
 }
 .cell {
@@ -412,11 +411,14 @@ img {
   width: 68%;
 }
 .send {
-  width: 50%;
-  font-size: 130%;
+  width: 100%;
+  font-size: 180%;
   font-weight: bold;
   margin: 3% 0% 0% 0%;
+  padding: 2% 2% 2% 2%;
   border-radius: 7px;
+  color: black;
+  background-color: silver;
   border: solid silver 5px;
 }
 .gridH {
@@ -596,10 +598,11 @@ img {
 }
 .homeImgFigure1, .homeImgFigure2 {
   width: 100%;
-  margin: 0% 0% 0% 0%;
+  margin: 3% 0% 0% 0%;
   padding: 0% 0% 0% 0%;
   background-color: gold;
   border-radius: 10px;
+  height: 42%;
 }
 .homeImg1, .homeImg2 {
   width: 100%;
@@ -607,7 +610,7 @@ img {
   padding: 0% 0% 0% 0%;
 }
 .homeImg1 {
-  padding: 20px;
+  padding: 5px;
 
 }
 .subscribeTitle {
@@ -915,9 +918,9 @@ img {
   }
   .twitter, .facebook, .email {
     display: inline;
-    width: 5%;
-    height: 5%;
-    margin: 5% 5% 0% 5%;
+    width: 7%;
+    height: 7%;
+    margin: 5% 3% 3% 7%;
     padding: 0% 0% 0% 0%;
   }
   .mainContent {
@@ -1100,7 +1103,6 @@ img {
     position: relative;
     left: 15%;
     padding: 2% 2% 3% 2%;
-    border: solid silver 5px;
     border-radius: 10px;
   }
   .sectionD {
@@ -1156,13 +1158,16 @@ img {
     width: 68%;
   }
   .send {
-    width: 50%;
-    font-size: 130%;
+    width: 100%;
+    font-size: 180%;
     font-weight: bold;
     margin: 3% 0% 0% 0%;
+    padding: 2% 2% 2% 2%;
     border-radius: 7px;
-    border: solid silver 5px;
-  }
+    color: black;
+    background-color: silver;
+    border: solid silver 5px; 
+  }  
   .gridH {
     font-size: 200%;
     font-weight: bold;
@@ -1297,6 +1302,9 @@ img {
     margin: 0% 0% 0% 0%;
     padding: 0% 0% 0% 5%;
   }
+  .videoHome {
+    background-color: cyan;
+  }
   .homeImgFigure {
     width: 100%;
     height: 100%;
@@ -1311,6 +1319,7 @@ img {
     height: 100%;
     margin: 0% 0% 0% 0%;
     padding: 0% 0% 0% 0%;
+    content: url('C:/Users/hp/blog-react/public/images/altHomeImg.jpg');
   }
   .homeAside1, .homeAside2 {
     float: left;
@@ -1347,11 +1356,11 @@ img {
   }
   .homeImgFigure1, .homeImgFigure2 {
     width: 100%;
-    height: 50%;
-    margin: 0% 0% 0% 0%;
+    margin: 3% 0% 0% 0%;
     padding: 0% 0% 0% 0%;
     background-color: gold;
     border-radius: 10px;
+    height: 100%;
   }
   .homeImg1, .homeImg2 {
     width: 100%;

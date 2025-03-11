@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 function Contact() {
     return (
       <div className="container contactPg col-md-12 col-sm-12 col-xs-12">
  <div className="gridAcontainer col-md-12 col-sm-12 col-xs-12"><h1 class="contactHead">Contact</h1></div>
  <div className="gridBcontainer col-md-12 col-sm-12 col-xs-12">
- <p className="inTouch">Get in touch with me via <a href="">Facebook</a> or 
+ <p className="inTouch">Get in touch with me via <Link to='https://web.facebook.com/muemaT.william'>Facebook</Link> or 
  send me an email.</p>
    <p className="cell">Cell: +254700578163</p>
  </div>
@@ -20,7 +22,7 @@ function Contact() {
               <label className="labels messageLabel" for="">Message:<br />
                   <textarea class="message" name="" id=""></textarea>
               </label><br />
-              <a href="mailTo:nicholasmuthoki@gmail.com"><button className="send">Send</button></a>
+              <Link className="send" to='mailTo:transformationcentretassia@gmail.com'>Send</Link>
       </form>
   </div>
 </div>
