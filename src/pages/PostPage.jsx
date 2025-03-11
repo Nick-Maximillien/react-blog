@@ -1,32 +1,34 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const PostPage = () => {
     const { documentId } = useParams(); // ✅ Get documentId from URL
+    const navigate = useNavigate();
     const [post, setPost] = useState(null);
+    const [posts, setPosts] = useState([]); // ✅ Store all posts
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const content = post?.Content || ""
-    const paragraphs = content.split("\n\n")
-    const firstParagraphWords = paragraphs[0].split(" ")
+    const content = post?.Content || "";
+    const paragraphs = content.split("\n\n");
+    const firstParagraphWords = paragraphs[0]?.split(" ") || [];
     const firstWord = firstParagraphWords.shift() || "";
-    const firstParagraphRest = firstParagraphWords.join(" ")
-    console.log("First word:", firstWord)
-    console.log("The rest:", firstParagraphRest)
-
+    const firstParagraphRest = firstParagraphWords.join(" ");
     
-
     useEffect(() => {
-        console.log('Captured documentId: ', documentId);
         axios
-            .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?filters[documentId][$eq]=${documentId}&populate=Images`)
+            .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?populate=Images`)
             .then((response) => {
                 if (response.data.data.length > 0) {
-                    console.log("Fetched Post Data:", response.data.data[0]);
-                    setPost(response.data.data[0]); // ✅ Get first matching post
+                    setPosts(response.data.data); // ✅ Store all posts
+                    const currentPost = response.data.data.find(post => post.id.toString() === documentId);
+                    if (currentPost) {
+                        setPost(currentPost);
+                    } else {
+                        setError("Post not found.");
+                    }
                 } else {
-                    setError("Post not found.");
+                    setError("No posts available.");
                 }
                 setLoading(false);
             })
@@ -37,6 +39,16 @@ const PostPage = () => {
             });
     }, [documentId]);
 
+    const handleNavigation = (direction) => {
+        const currentIndex = posts.findIndex(p => p.id.toString() === documentId);
+        if (currentIndex !== -1) {
+            const newIndex = direction === "prev" ? currentIndex - 1 : currentIndex + 1;
+            if (posts[newIndex]) {
+                navigate(`/post/${posts[newIndex].id}`);
+            }
+        }
+    };
+
     if (loading) return <p>Loading post...</p>;
     if (error) return <p>{error}</p>;
     if (!post) return <p>Post not found.</p>;
@@ -45,32 +57,32 @@ const PostPage = () => {
         <div className="container mt-4 post-page">
             <button className="postDate">{post.Date}</button>
             <h1 className="postTitle">{post.Title || "Untitled Post"}</h1>
-                <figure className='blogProfile'>
-                    <img
-                    src={`../images/blogProfile.jpg`}
-                    alt='author profile'
-                    className="left-image img-fluid"
-                />
+            <figure className='blogProfile'>
+                <img src={`../images/blogProfile.jpg`} alt='author profile' className="left-image img-fluid" />
                 <figcaption>Rev. Muema William</figcaption>
-                </figure>
+            </figure>
             {/* Content */}
-              {paragraphs.map((paragraph, index) => (
-                 <p key={index} className="postContent">
+            {paragraphs.map((paragraph, index) => (
+                <p key={index} className="postContent">
                     {index === 0 ? (
                         <>
-                        <span style={{ fontWeight: "bold", fontSize: "150%"}}>{firstWord}</span> {" "} {firstParagraphRest}
+                            <span style={{ fontWeight: "bold", fontSize: "150%" }}>{firstWord}</span> {" "} {firstParagraphRest}
                         </>
                     ) : (
                         paragraph
                     )}
-                 </p>
-              ))}
+                </p>
+            ))}
             <section className="prevNext col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <p className='previous'>◄ Prev |</p><p className='next'>| Next ►</p>
-                </section>
+                <p className='previous' onClick={() => handleNavigation("prev")} style={{ cursor: "pointer" }}>
+                    ◄ Prev |
+                </p>
+                <p className='next' onClick={() => handleNavigation("next")} style={{ cursor: "pointer" }}>
+                    | Next ►
+                </p>
+            </section>
         </div>
     );
-    
 };
 
 export default PostPage;
