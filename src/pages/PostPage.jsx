@@ -12,18 +12,12 @@ const PostPage = () => {
 
     useEffect(() => {
         console.log('Captured documentId: ', documentId);
-
-        // Fetch all posts to determine previous/next
         axios
-            .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?populate=Images`)
+            .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?filters[documentId][$eq]=${documentId}&populate=Images`)
             .then((response) => {
-                const posts = response.data.data;
-                setAllPosts(posts);
-
-                // Find the current post
-                const currentPost = posts.find(p => p.id.toString() === documentId);
-                if (currentPost) {
-                    setPost(currentPost);
+                if (response.data.data.length > 0) {
+                    console.log("Fetched Post Data:", response.data.data[0]);
+                    setPost(response.data.data[0]); // ✅ Get first matching post
                 } else {
                     setError("Post not found.");
                 }
@@ -33,6 +27,16 @@ const PostPage = () => {
                 console.error("Error fetching post:", error);
                 setError("Failed to load post.");
                 setLoading(false);
+            });
+
+        // Fetch all posts to determine prev/next navigation
+        axios
+            .get(`https://my-strapi-blog-1.onrender.com/api/blog-posts?sort=Date:asc`)
+            .then((response) => {
+                setAllPosts(response.data.data);
+            })
+            .catch((error) => {
+                console.error("Error fetching all posts:", error);
             });
     }, [documentId]);
 
