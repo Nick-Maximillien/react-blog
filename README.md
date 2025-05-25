@@ -1,8 +1,44 @@
-# React + Vite
+# 📰 React Blog Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend of a blog website built using **React.js**, designed to fetch and display content dynamically from a **Strapi CMS** backend.
 
-Currently, two official plugins are available:
+It is mobile responsive, easy to extend, and ready to use for personal or client blogging projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🚀 Live Site
+
+🔗 [Visit Live Blog](https://muema-william.netlify.app)  
+📦 [GitHub Repository](https://github.com/Nick-Maximillien/react-blog)
+
+
+---
+
+## 🛠 Tech Stack
+
+- **React.js** – Frontend framework
+- **React Router DOM** – Client-side routing
+- **Axios / Fetch API** – Communicate with Strapi backend
+- **Bootstrap / Custom CSS** – Layout and responsiveness
+- **Netlify** – Frontend hosting
+
+---
+
+## 📁 Folder Structure
+src/
+├── components/ # Reusable UI components (Navbar, Footer, PostCard)
+├── pages/ # Pages (HomePage, PostPage, AboutPage)
+├── App.js # Route definitions
+└── index.js # Main render file
+
+---
+
+## ⚙️ How to Run Locally
+
+1. **Clone the Repo:**
+
+```bash
+git clone https://github.com/yourusername/react-blog-frontend.git
+cd react-blog
+
+npm install
